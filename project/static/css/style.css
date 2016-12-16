@@ -1,0 +1,17 @@
+.titlebox {
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #262626;
+    text-transform: uppercase !important;
+    display: flex;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.blog{
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*position: absolute;*/
+}

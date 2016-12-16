@@ -1,0 +1,10 @@
+{% extends "project:template/_base.jinja2" %}
+<div class ="blog">
+{% block content %}
+{%for post in posts%}
+<p>
+<h3>{{post.title}} by {{post.author}}</h3>
+</p>
+{%endfor%}
+{%endblock%}
+</div>
