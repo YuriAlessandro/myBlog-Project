@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <title>{{title}} | Index</title>
+    <title>Blog | Index</title>
     <link href="{{request.static_url('project:static/css/style.css')}}" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="{{request.static_url('project:static/css/bootstrap.min.css')}}">
@@ -14,12 +14,8 @@
 </head>
 <body>
     <div class="titlebox jumbotron text-center">
-        <h1>{{title}}</h1>
+        <h1><a href="{{request.route_url('home')}}">MyBlog</a></h1>
     </div>
-    <br>
-    <nav>
-        <a href="{{request.route_url('insert')}}"> Adicionar post </a>
-    </nav>
     <div>{%block content%}{%endblock%}</div>
 </body>
 </html>

@@ -13,18 +13,21 @@ import pymongo
 def home(request):
     posts = list(request.db['posts'].find())
 
-    return {'title': 'yaBlog', 'posts':posts}
+    return {'posts':posts}
 
 @view_config(route_name='insert', renderer='project:template/insertPost.jinja2')
 def insert(request):
     params = request.params
     title = params.get('title')
     author = params.get('author')
+    content = params.get('content')
+    # p_id = title.strip()
 
     if request.POST and title and author:
         post = {
             'title': title,
             'author': author,
+            'content': content,
         }
 
         request.db['posts'].insert(post)
