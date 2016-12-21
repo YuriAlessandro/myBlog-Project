@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <title>Blog | Index</title>
+    <title>Blog | {{name}}</title>
     <link href="{{request.static_url('project:static/css/style.css')}}" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="{{request.static_url('project:static/css/bootstrap.min.css')}}">
@@ -11,6 +11,7 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="{{request.static_url('project:static/js/bootstrap.min.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="titlebox jumbotron text-center">

@@ -1,0 +1,27 @@
+{% extends "project:template/_base.jinja2" %}
+{% block content %}
+<center>
+    <div>
+        <img src="{{ request.static_url('project:static/slide-surf-ilha-grande.jpg') }}" id="image" alt="Carinha surfando">
+        <input type="hidden" id="img_path" value="{{ request.static_url('project:static/slide-surf-ilha-grande.jpg') }}">
+    </div>
+    <br>
+    <div>
+        <a class="btn btn-primary" id="rotateleft"><i class="icon-user"></i>Rotate Left</a>
+        <a class="btn btn-primary" id="rotateright"><i class="icon-user"></i>Rotate Right</a>
+        <input type="hidden" name="Input" id="degree">
+    </div>
+    <br>
+    <div>
+        <a class="btn btn-success" id="confirm">Confirm</a>
+    </div>
+    <br>
+    <div id="new-img">
+    </div>
+    <br>
+    <script type="text/javascript">
+        var route = "{{request.route_url('img_rotate_confirm')}}";
+    </script>
+    <script src="{{ request.static_url('project:static/js/rotateImg.js') }}"></script>
+    </center>
+{%endblock%}
